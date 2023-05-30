@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>PORTFOLIO of NASIF</title>
+		<title>Machine Learning Project</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -44,13 +44,13 @@
 					<section id="banner" class="style2">
 						<div class="inner">
 							<span class="image">
-								<img src="images/eq-1.jpg" alt="" />
+								<img src="images/C-19.jpg" alt="" />
 							</span>
 							<header class="major">
-								<h1>Exploratory Data Ananlysis on Earthquack Dataset(2001-2022)</h1>
+								<h1>COVID-19 Pneumonia Detection Using Residual Attention Network (Image Classificaton)</h1>
 							</header>
 							<div class="content">
-								<p>Tools used: Python, Numpy, Pandas, Matplotlib, Plotly </p>
+								<p>Tools used: Python, Tensorflow, Scikit-learn, Numpy, Pandas, Matplotlib, Seaborn </p>
 							</div>
 						</div>
 					</section>
@@ -62,62 +62,129 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h2>Getting fimiliar with the dataset</h2>
+										<h2>Background of the project</h2>
 									</header>
-									<p>Datasets contain records of 782 earthquakes from 1/1/2001 to 1/1/2023 with many missing values. So, at first I detected the columns which holds the missing value. Then I tried to clean the missing values or extract values from other columns.</p>
+									<p>Covid-19 is a respiratory infection that mainly affects the human lungs, which has been declared as a global pandemic that affected the globe. Covid-19 and Pneumonia mainly damages human lungs. Compared to people who have pneumonia, those affected by COVID-19 have significantly worse lung damage. Even most people recover from pneumonia without any lasting lung damage. That’s why the deep learning paradigm has been applied vastly to investigate radiographic images such as Chest X-Rays (CXR) to detecting covid-19 and classifying it from the viral pneumonia.
+										In this project, we are proposing a method to detect COVID-19 and classifying it from Pneumonia with chest X-rays using a deep learning.</p>
 								</div>
 							</section>
 
 						<!-- Two -->
 							<section id="two" class="spotlights">
 								<section>
-									<a href="generic.html" class="image">
-										<img src="images/v1.jpg" alt="" data-position="center center" />
+									<a href="" class="image">
+										<img src="images/Patients' X-ray data-set.png" alt="" data-position="center center" />
 									</a>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Visualizing the Missing Data</h3>
+												<h3>Methodology</h3>
 											</header>
-											<p>Vilusalizing missing data helps to instantly detect the columns that we need to work on.</p>
-											<ul class="actions">
+											<p>In this method, we will collect chest X-rays from the patients of three categories. These categories are COVID-19, Pneumonia and Normal(Healthy) chest X-rays. We will take the images of these X-rays and create a dataset where all three category of X-rays will exist. Then the dataset will be preprocessed by splitting the dataset into three parts, training, validation and testing. After that we will apply data augmentation technique to increase the amount of data that we are working with by adding slightly modification. After preprocessing the dataset, we will train our model(Residual Attention Network) with the training data. After training the model we will evaluate our model with validation data. Finally our model will be ready to predict the class of any given chest x-ray and classify it among three class, COVID-19, Pneumonia and Normal.</p>
+											<!-- <ul class="actions">
 												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
+											</ul> -->
 										</div>
 									</div>
 								</section>
 								<section>
 									<a href="generic.html" class="image">
-										<img src="images/v2.png" alt="" data-position="top center" />
+										<img src="images/COVID-19 (1).jpg" alt="" data-position="top center" />
 									</a>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Validate the dataset after cleaning</h3>
+												<h3>Dataset</h3>
 											</header>
-											<p>Visualizing the dataset after cleaning helps to validate if the dataset is ready to perform analysis</p>
-											<ul class="actions">
+											<p>We have used chest X-rays of three classes: COVID-19, Pneumonia, Normal.This is a combined curated dataset of COVID-19 Chest X-ray images obtained by collating 15 publically available datasets . The present dataset contains 1207 COVID-19 X-Rays, 3270 Normal X-Rays and 3556 Pneumonia X-Rays. We have converted all the images into 256x256 (height x width) to make the training faster.</p>
+											<!-- <ul class="actions">
 												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
+											</ul> -->
 										</div>
 									</div>
 								</section>
 								<section>
 									<a href="generic.html" class="image">
-										<img src="images/a1.png" alt="" data-position="25% 25%" />
+										<img src="images/Model.png" alt="" data-position="25% 25%" />
 									</a>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Analyzing the data</h3>
+												<h3>Model Summary</h3>
 											</header>
-											<p>After analyzing the data, important insights were extracted from the data such as: the most earthquack affected country, and the earthquack density all over the world.</p>
-											<ul class="actions">
+											<p>Residual Attention Network that we used is constructed by stacking up Attention module and Residual module onto one another. Our model had 10.43 million parameters and among them 10.40 million parameters were trainable and almost 26.8k parameters were non-trainable</p>
+											<!-- <ul class="actions">
 												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
+											</ul> -->
 										</div>
 									</div>
 								</section>
+								<section>
+									<a href="" class="image">
+										<img src="images/acc and loss.png" alt="" data-position="25% 25%" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Result (Accuracy and loss)</h3>
+											</header>
+											<p>The accuracy and the loss of the model is verified by the validation data. The model predicts accuracy and loss for the validation data. Accuracy vs Validation Accuracy and Loss vs Validation loss represents how well a model is trained. Training parameters and validation parameters will be close if the model or neural network is being trained properly. The closer these parameter are the model is more well-trained. In our model, we can see that both training and validation parameter(accuracy and loss) follow each other quite well.</p>
+											<!-- <ul class="actions">
+												<li><a href="generic.html" class="button">Learn more</a></li>
+											</ul> -->
+										</div>
+									</div>
+								</section>
+								<section>
+									<a href="" class="image">
+										<img src="images/Confusion_Matrix_B.png" alt="" data-position="25% 25%" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Result (Confusion Matrix)</h3>
+											</header>
+											<p>A multi-class supervised learning problem can be visualized using the confusion matrix by building a matrix. In the matrix, each line depicts the occurrences in a predicted class, and each column shows the instances in the actual class. The Confusion Matrix for our classification problem has three classes and it is a 3*3 matrix that has nine parameters.From the confusion matrix, we can see that true positive value for Normal, Pneumonia and Covid is 0.92, 0.98 and 0.98 accordingly.</p>
+											<!-- <ul class="actions">
+												<li><a href="generic.html" class="button">Learn more</a></li>
+											</ul> -->
+										</div>
+									</div>
+								</section>
+								<section>
+									<a href="" class="image">
+										<img src="images/f1.png" alt="" data-position="25% 25%" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Result (F1 Score, Precision, Recall)</h3>
+											</header>
+											<p>By merging the recall and precision evaluation matrices into a single performance measure evaluation matrices, the F1 score evaluation matrix is used to assess the performance of a classifier.Here, we have obtained F1 score of 0.95 for Normal, 0.96 for Pneumonia and 0.98 for COVID-19 class. Among the three classes the model is performing better for COVID-19 detection. We have achieved 0.96 overall F1 score for all three classes where 1.00 is the ideal scenario. This overall F1 score indicates the excellent performance of our model for this particular problem.</p>
+											<!-- <ul class="actions">
+												<li><a href="generic.html" class="button">Learn more</a></li>
+											</ul> -->
+										</div>
+									</div>
+								</section>
+								<section>
+									<a href="" class="image">
+										<img src="images/roc.png" alt="" data-position="25% 25%" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Result (ROC Curve)</h3>
+											</header>
+											<p>A statistic for gauging a classifier's effectiveness is the roc area. This is achieved by plotting the genuine positive rate versus the false positive rate. The accuracy of the classifier is then evaluated using the area under the generated roc curve. The area is nearer to 1 the better the classifier. Covid detection and classification is a multi-class problem and that’s why we can see one curve for each class. We get the AUC score 0.99 for Pneumonia, 0.99 for Normal and 1.00 for COVID-19. Here, the idea score for each class is 1.00. So from the curve, we can see that the true positive rate for each class is really good so the performance of the model is excellent. </p>
+											<!-- <ul class="actions">
+												<li><a href="generic.html" class="button">Learn more</a></li>
+											</ul> -->
+										</div>
+									</div>
+								</section>
+
+							
 							</section>
 
 						<!-- Three -->
@@ -128,7 +195,7 @@
 									</header>
 									<p>See the notebook on Kaggle to see the full code of this project</p>
 									<ul class="actions">
-										<li><a href="https://www.kaggle.com/code/nasifajwad/eda-on-earthquack-dataset" class="button next">Notebook on Kaggle</a></li>
+										<li><a href="https://www.kaggle.com/code/nasifajwad/chest-disease-classification-attentionresnet/notebook" class="button next">Notebook on Kaggle</a></li>
 									</ul>
 								</div>
 							</section>
